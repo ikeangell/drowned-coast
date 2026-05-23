@@ -1,3 +1,90 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* ===== Drowned Coast Theme ===== */
+
+:root {
+    --dark: #0f1720;
+    --dark-secondary: #17212b;
+    --mist: #94a3b8;
+    --sea: #3b556b;
+    --foam: #d6dee6;
+    --accent: #6f8fa6;
+    --link: #8fb7d8;
+    --link-hover: #c7dff2;
+  }
+  
+  /* Background */
+  body {
+    background: linear-gradient(
+      180deg,
+      #0b1117 0%,
+      #111a23 40%,
+      #17212b 100%
+    );
+    color: var(--foam);
+    font-family: "Georgia", serif;
+  }
+  
+  /* Main content */
+  .page {
+    background-color: rgba(15, 23, 32, 0.82);
+    border: 1px solid rgba(111, 143, 166, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Headers */
+  h1, h2, h3 {
+    color: #dbe7f0;
+    letter-spacing: 0.03em;
+  }
+  
+  h1 {
+    border-bottom: 1px solid rgba(143, 183, 216, 0.2);
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--link);
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--link-hover);
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: rgba(10, 15, 20, 0.9);
+    border-right: 1px solid rgba(111, 143, 166, 0.15);
+  }
+  
+  /* Graph */
+  .graph {
+    opacity: 0.75;
+  }
+  
+  /* Code blocks */
+  pre {
+    background-color: #111827;
+    border-radius: 8px;
+  }
+  
+  /* Subtle page fade */
+  .page article {
+    animation: fadeIn 0.35s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
